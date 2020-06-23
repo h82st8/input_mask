@@ -1,0 +1,57 @@
+.body {
+	display: grid;
+	height: 90vh;
+	align-content: center;
+	justify-content: center;
+}
+
+.main {
+	width: 300px;
+}
+
+.form {
+	position: relative;
+	display: grid;
+	grid-template-columns: 40px 1fr 40px;
+	grid-template-rows: 30px;
+	grid-auto-rows: 30px;
+	grid-gap: 2px;
+	grid-template-areas: "select number button"
+		". final .";
+}
+
+.select {
+	opacity: 0;
+	z-index: 2;
+	position: relative;
+	padding-top: 1px;
+	grid-area: select;
+}
+
+.number {
+	grid-area: number;
+}
+
+.span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 3px;
+	width: 40px;
+	height: 29px;
+	background-color: lightblue;
+	line-height: 29px;
+	text-align: center;
+}
+
+.button {
+	padding: 0;
+	background-color: pink;
+	grid-area: button;
+	border-radius: 3px;
+}
+
+.final {
+	display: block;
+	grid-area: final;
+}
